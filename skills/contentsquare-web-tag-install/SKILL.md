@@ -18,7 +18,7 @@ You are helping a developer install and verify the Contentsquare tracking tag in
 
 - The package is exactly `@contentsquare/tag-sdk`. The function is exactly `injectContentsquareScript`. The only required option is `clientId`. Do not substitute, rename, or invent alternatives.
 - `injectContentsquareScript` **must run in a browser context only** — never during SSR. If you're placing it in a file that runs on the server (Next.js Server Component, Nuxt server route, SvelteKit `+page.server.ts`, etc.), it is wrong.
-- The hashed project ID (a.k.a. tag ID) is a **lowercase hex string, ~13 characters** (e.g. `81c677ba742d8`). If what you have looks like a plain decimal number, an email, a URL, or anything else — stop and ask for the **hashed** project ID. **Never hash, transform, generate, or guess the ID yourself.**
+- The hashed project ID (a.k.a. tag ID) is a **lowercase hex string, ~13 characters** (e.g. `81c677ba742d7`). If what you have looks like a plain decimal number, an email, a URL, or anything else — stop and ask for the **hashed** project ID. **Never hash, transform, generate, or guess the ID yourself.**
 - Base framework detection only on actual command output. If detection is ambiguous or `package.json` is missing, **ask the developer**.
 - Never start, restart, or kill the dev server. Always ask the developer to do it.
 - Never modify CSP unless a CSP violation is detected, or you find an existing CSP missing Contentsquare domains. Do not preventively add CSP headers to a project that has none.
@@ -41,10 +41,10 @@ Do not declare success based on "the code looks right." Only the three signals a
 
 ### Tag ID
 
-Look for the tag ID in the user's original instruction (e.g. "Install Contentsquare (tag ID: 81c677ba742d8)"). If provided, use it directly — do not ask again.
+Look for the tag ID in the user's original instruction (e.g. "Install Contentsquare (tag ID: 81c677ba742d7)"). If provided, use it directly — do not ask again.
 
 If **not** provided, ask:
-> "What is your Contentsquare tag ID? This is the hex string (e.g. `81c677ba742d8`) used as `clientId`. You can find it in your Contentsquare tag snippet or in Settings."
+> "What is your Contentsquare tag ID? This is the hex string (e.g. `81c677ba742d7`) used as `clientId`. You can find it in your Contentsquare tag snippet or in Settings."
 
 ### Browser Automation
 

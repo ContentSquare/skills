@@ -10,7 +10,7 @@ Use Agent skills to let your AI coding assistant (GitHub Copilot, Cursor, Claude
 **Install and verify the Contentsquare tag**: Let your agent handle the installation of the Contentsquare tag on your website, ensuring it's set up correctly to start collecting data.
 
 ```
-Add contentsquare to my website using tag ID as `81c677ba742d8`
+Add contentsquare to my website using tag ID as `81c677ba742d7`
 ```
 
 ## Installation
