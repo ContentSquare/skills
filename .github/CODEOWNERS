@@ -4,3 +4,7 @@
 
 # GitHub Copilot agents folder ownership
 .github/agents/* @ContentSquare/tag-functions
+
+# TAG TEAM
+
+**/contentsquare-web*/                                                    @ContentSquare/tag-functions

@@ -1,0 +1,33 @@
+name: plugin
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: nodejs-22-small
+    steps:
+      - uses: ContentSquare/actions-checkout@approved-v4
+
+      - name: Validate JSON manifests
+        run: |
+          shopt -s nullglob
+          for f in .claude-plugin/marketplace.json plugins/*/.claude-plugin/plugin.json; do
+            echo "validating $f"
+            node -e "const j=require('./$f'); if(!j.name) throw new Error('$f: missing name'); if(!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(j.name)) throw new Error('$f: name must be kebab-case');"
+          done
+
+      - name: Check generated copies are in sync
+        run: |
+          ./scripts/sync-plugin.sh
+          if ! git diff --quiet; then
+            echo "::error::Generated plugin copies are out of sync with their authored sources."
+            echo "Run ./scripts/sync-plugin.sh and commit the result."
+            git --no-pager diff --stat
+            exit 1
+          fi
