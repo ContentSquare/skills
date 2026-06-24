@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   validate:
-    runs-on: nodejs-22-small
+    runs-on: nodejs-22-medium
     steps:
       - uses: ContentSquare/actions-checkout@approved-v4
 
