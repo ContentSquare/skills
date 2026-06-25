@@ -9,5 +9,10 @@
   "homepage": "https://contentsquare.com/",
   "repository": "https://github.com/ContentSquare/skills",
   "keywords": ["contentsquare", "analytics", "journey", "impact", "funnel", "ux", "metrics", "errors", "mcp"],
-  "logo": "assets/logo.png"
+  "logo": "assets/logo.png",
+  "mcpServers": {
+    "contentsquare": {
+      "url": "https://api.contentsquare.com/mcp"
+    }
+  }
 }
