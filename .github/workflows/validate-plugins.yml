@@ -28,12 +28,22 @@ jobs:
       - name: Validate Claude Code plugins
         run: |
           shopt -s nullglob
+          failed=0
           for dir in plugins/*/; do
-            if [[ -f "$dir.claude-plugin/plugin.json" ]]; then
-              echo "validating $dir"
-              claude plugin validate "$dir"
+            manifest="${dir}.claude-plugin/plugin.json"
+            if [[ -f "$manifest" ]]; then
+              echo "--- validating $dir ---"
+              echo "manifest contents:"
+              cat "$manifest"
+              echo ""
+              echo "JSON syntax check:"
+              node -e "JSON.parse(require('fs').readFileSync('$manifest','utf8')); console.log('OK')" || { echo "::error file=$manifest::Invalid JSON syntax"; failed=1; continue; }
+              echo "claude plugin validate output:"
+              claude plugin validate "$dir" || failed=1
+              echo ""
             fi
           done
+          exit $failed
 
       - name: Check generated copies are in sync
         run: |
