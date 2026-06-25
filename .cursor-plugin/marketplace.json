@@ -14,8 +14,8 @@
       "description": "Install & verify the Contentsquare tracking tag with your AI agent."
     },
     {
-      "name": "contentsquare-mcp",
-      "source": "plugins/contentsquare-mcp",
+      "name": "contentsquare",
+      "source": "plugins/contentsquare",
       "description": "Query your Contentsquare analytics data directly from Cursor using natural language."
     }
   ]

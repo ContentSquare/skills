@@ -9,7 +9,7 @@ Query your Contentsquare analytics data directly from Cursor using natural langu
 
 ## Installation
 
-Install this plugin from the [Cursor marketplace](https://cursor.com/marketplace) by searching for **contentsquare-mcp**, or add it directly from this repository URL.
+Install this plugin from the [Cursor marketplace](https://cursor.com/marketplace) by searching for **contentsquare**, or add it directly from this repository URL.
 
 Once installed, Cursor will prompt you to authenticate with your Contentsquare account via OAuth. No manual token management required.
 
