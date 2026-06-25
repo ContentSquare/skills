@@ -86,4 +86,4 @@ Full documentation is available at [support.contentsquare.com](https://support.c
 ## Support
 
 - Documentation: [Model Context Protocol (MCP)](https://support.contentsquare.com/hc/en-us/articles/41563169756945-Model-Context-Protocol-MCP)
-- Support: [engineering@contentsquare.com](mailto:engineering@contentsquare.com)
+- Support: [support@contentsquare.com](mailto:support@contentsquare.com)
