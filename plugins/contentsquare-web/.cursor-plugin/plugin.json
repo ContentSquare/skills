@@ -1,0 +1,19 @@
+{
+  "name": "contentsquare-web",
+  "description": "Install and verify the Contentsquare tracking tag in any web project (Next.js, React, Vue, Angular, SvelteKit, Nuxt, static HTML). Drives installation and runs browser-based verification of tag load, pageviews and CSP via npx @contentsquare/wizard.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Contentsquare",
+    "url": "https://contentsquare.com"
+  },
+  "homepage": "https://docs.contentsquare.com/en/web/#ai-assisted-setup",
+  "repository": "https://github.com/ContentSquare/skills",
+  "license": "MIT",
+  "keywords": [
+    "contentsquare",
+    "analytics",
+    "tag",
+    "tracking",
+    "setup"
+  ]
+}
